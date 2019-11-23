@@ -1,0 +1,15 @@
+name: "awesome-n64-theme"
+description: "Jekyll theme for the awesome-n64-development repo"
+
+url: '' 
+baseurl: ''
+
+markdown: kramdown
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+source: .
+destination: ./_site
+
+sass:
+    style: :compressed
+    sass_dir: assets/css/
