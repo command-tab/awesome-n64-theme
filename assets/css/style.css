@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
 body {
   background-color: #efefef;
     margin: 0;
@@ -7,19 +8,53 @@ body {
     line-height: 1.5em;
     color: #606c71;
 }
+
 h1, h2, h3, h4, h5, h6 {
     color: #ff291b;
 }
+
 h3 {
     font-weight: normal;
 }
+
 a {
     color: #1955ff;
 }
+
 a:visited {
     color: #5e89d3;
 }
+
 #content {
     width: 960px;
     margin: 0 auto;
+}
+
+.page-header {
+  position: relative;
+}
+
+#logo {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+@media screen and (min-width: 64em) {
+    .page-header {
+        height: 320px;
+    }
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+    .page-header {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 42em) {
+    .page-header {
+        height: 200px;
+    }
 }

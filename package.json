@@ -1,0 +1,21 @@
+{
+  "name": "awesome-n64-theme",
+  "version": "1.0.0",
+  "description": "Jekyll theme for the awesome-n64-development repo",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --mode=development --open",
+    "build": "webpack --mode=production"
+  },
+  "dependencies": {
+    "dat.gui": "0.7.6",
+    "three": "0.109.0"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "5.0.4",
+    "webpack": "4.41.0",
+    "webpack-cli": "3.3.9",
+    "webpack-dev-server": "3.8.1"
+  }
+}

@@ -13,8 +13,13 @@
         <link rel="stylesheet" href="{{ site.url }}/assets/css/style.css" type="text/css">
     </head>
     <body>
+        <section class="page-header">
+            <canvas id="logo"></canvas>
+            <a href="https://github.com/command-tab/awesome-n64-development" class="btn">View on GitHub</a>
+        </section>
         <main id="content" class="main-content" role="main">
             {{ content }}
+            <script type="text/javascript" src="{{ site.url }}/assets/bundle.js"></script>
         </main>
     </body>
 </html>

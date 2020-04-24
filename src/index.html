@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+    <title>Awesome N64 Development | awesome-n64-development</title>
+    <meta name="generator" content="Jekyll v3.8.5" />
+    <meta property="og:title" content="Awesome N64 Development" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="description" content="A curated list of Nintendo 64 development resources including toolchains, documentation, emulators, and more" />
+    <meta property="og:description" content="A curated list of Nintendo 64 development resources including toolchains, documentation, emulators, and more" />
+    <link rel="canonical" href="https://n64.dev/" />
+    <meta property="og:url" content="https://n64.dev/" />
+    <meta property="og:site_name" content="awesome-n64-development" />
+    <script type="application/ld+json">
+    {"@type":"WebSite","headline":"Awesome N64 Development","url":"https://n64.dev/","name":"awesome-n64-development","description":"A curated list of Nintendo 64 development resources including toolchains, documentation, emulators, and more","@context":"http://schema.org"}</script>
+    <!-- End Jekyll SEO tag -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="https://n64.dev/assets/css/style.css">
+    <style>
+      .page-header {
+        position: relative;
+      }
+
+      #logo {
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+      
+      #gui-container {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        z-index: 10;
+      }
+
+      @media screen and (min-width: 64em) {
+          .page-header {
+              height: 320px;
+          }
+      }
+
+      @media screen and (min-width: 42em) and (max-width: 64em) {
+          .page-header {
+              height: 250px;
+          }
+      }
+
+      @media screen and (max-width: 42em) {
+          .page-header {
+              height: 200px;
+          }
+      }
+    </style>
+  </head>
+  <body>
+
+    <section class="page-header">
+      <div id="gui-container"></div>
+      <canvas id="logo"></canvas>
+      <a href="https://github.com/command-tab/awesome-n64-development" class="btn">View on GitHub</a>
+    </section>
+
+    <section class="main-content">
+      <h1 id="awesome-n64-development">Awesome N64 Development</h1>
+      <p>A curated list of Nintendo 64 development resources including toolchains, documentation, emulators, and more</p>
+      <h2 id="contents">Contents</h2>
+      <ul>
+        <li><a href="#community">Community</a></li>
+        <li><a href="#documentation">Documentation</a></li>
+        <li><a href="#toolchains">Toolchains</a></li>
+        <li><a href="#assemblers">Assemblers</a></li>
+        <li><a href="#emulators">Emulators</a></li>
+        <li><a href="#development-hardware">Development Hardware</a></li>
+        <li><a href="#tools-and-libraries">Tools and Libraries</a>
+          <ul>
+            <li><a href="#development-cartridge-loaders">Development Cartridge Loaders</a></li>
+            <li><a href="#asset-conversion-and-viewing">Asset Conversion and Viewing</a></li>
+            <li><a href="#audio-playback-and-editing">Audio Playback and Editing</a></li>
+            <li><a href="#debugging">Debugging</a></li>
+            <li><a href="#rom-manipulation">ROM Manipulation</a></li>
+            <li><a href="#development-libraries">Development Libraries</a></li>
+          </ul>
+        </li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#programming">Programming</a>
+          <ul>
+            <li><a href="#assembly">Assembly</a></li>
+            <li><a href="#c">C</a></li>
+            <li><a href="#rust">Rust</a></li>
+          </ul>
+        </li>
+      </ul>
+      <h2 id="community">Community</h2>
+      <ul>
+        <li><a href="https://discord.gg/aU6Bkcc">N64brew</a> - Nintendo 64 homebrew chat on Discord</li>
+        <li><a href="https://discord.gg/FrPyDtr">Discord64</a> - Nintendo 64 emulation and homebrew chat on Discord</li>
+        <li><a href="http://chat.efnet.org/?channels=n64dev"><code class="highlighter-rouge">#n64dev</code> on EFnet</a> - Nintendo 64 development IRC channel on EFnet</li>
+        <li><a href="https://www.reddit.com/r/N64Homebrew/">/r/N64Homebrew</a> - The N64Homebrew subreddit</li>
+      </ul>
+      <h2 id="documentation">Documentation</h2>
+      <ul>
+        <li><a href="https://ultra64.ca/">Ultra64</a> - An absolute wealth of documentation including official Nintendo 64 development manuals, as well as SDK downloads and reference material</li>
+        <li><a href="http://n64dev.org/">N64dev</a> - Useful N64 hacking links</li>
+        <li><a href="http://n64dev.org/p/U10504EJ7V0UMJ1.pdf">NEC VR4300i CPU Manual @ N64dev</a> - The manual for the NEC VR4300i CPU used by the Nintendo 64</li>
+        <li><a href="http://n64.icequake.net/mirror/www.jimb.de/Projects/N64TEK.htm">N64TEK</a> - Nintendo 64 technical information, registers, memory map, and instruction set</li>
+        <li><a href="https://dragonminded.com/n64dev/">dragonminded N64DEV</a> - <code class="highlighter-rouge">libdragon</code> usage, Windows and Linux toolchains, and RCP documentation</li>
+        <li><a href="http://shygoo.net/n64-uncompiled/">N64 Uncompiled Source Code</a> - Uncompiled source code and related material discovered in various Nintendo 64 ROM images</li>
+        <li><a href="http://n64dev.org/romformats.html">N64 ROM Formats</a> - A short N64 ROM format quick reference sheet</li>
+        <li><a href="https://www.reddit.com/r/emulation/comments/7hrvzp/the_three_different_n64_rom_formats_explained_for/?st=jn9t30t4&amp;sh=1951de19">N64 ROM Formats Explained</a> - Details the three commonly encountered Nintendo 64 ROM formats (use Big Endian/.z64)</li>
+        <li><a href="http://github.com/joeldipops/TransferBoy/blob/master/docs/TransferPakReference.md">Accessory Reference</a> - Guide on how to communicate with the Transfer Pak and Rumble Pak</li>
+        <li><a href="https://hack64.net/wiki/doku.php?id=nintendo_64">Hack64</a> - A variety of documentation on RCP data structures, compression, assembly, and more</li>
+        <li><a href="http://en64.shoutwiki.com/wiki/Main_Page">Encryption 64</a> - A collection of documentation on MIPS assembly, GameShark code structure, and layout of individual titles</li>
+        <li><a href="https://github.com/LuigiBlood/64dd/wiki">64dd wiki</a> - Documentation on 64DD hardware, disks, and related catridges</li>
+      </ul>
+      <h2 id="toolchains">Toolchains</h2>
+      <ul>
+        <li><a href="https://ultra64.ca/resources/software/">Official Nintendo 64 SDKs</a> - Official Nintendo 64 Software Development Kits for Windows and SGI IRIX</li>
+        <li><a href="https://github.com/tj90241/n64chain">n64chain</a> - A Nintendo 64 development toolchain based on GCC that does not depend on any proprietary Nintendo library</li>
+        <li><a href="https://github.com/trhodeos/modern-n64sdk">modern-n64sdk</a> - Describes how to get a modern build of GCC cross-compiling on a modern OS (Linux, Windows, macOS)</li>
+        <li><a href="https://github.com/Mr-Pnut/portable-n64-toolchain">portable-n64-toolchain</a> - A Dockerized N64 toolchain based on modern-n64sdk</li>
+      </ul>
+      <h2 id="assemblers">Assemblers</h2>
+      <ul>
+        <li><a href="https://github.com/ARM9/bass">ARM9/bass</a> - A fork of <a href="https://byuu.org/tool/bass/">bass</a> which has been updated with N64 MIPS/RSP/RDP output</li>
+        <li><a href="https://github.com/Kingcom/armips">ARMIPS</a> - An assembler for various ARM and MIPS platforms</li>
+        <li><a href="https://github.com/superjack111/screwaround64">Screwaround64</a> - An interactive assembler for Nintendo 64</li>
+      </ul>
+      <h2 id="emulators">Emulators</h2>
+      <ul>
+        <li><a href="https://github.com/n64dev/cen64">cen64</a> - A <a href="https://retrocomputing.stackexchange.com/questions/1191/what-exactly-is-a-cycle-accurate-emulator">cycle-accurate</a> Nintendo 64 emulator for Windows, Linux, and Mac. While currently not fast enough to play games at full speed, it aims for perfect emulation by emulating the hardware inside of the console down to the register-transfer level.</li>
+        <li><a href="https://github.com/bryanperris/cor64">cor64</a> - An in-progress Nintendo 64 emulator written in C#</li>
+        <li><a href="https://www.pj64-emu.com">Project64</a> (<a href="https://github.com/project64/project64">GitHub</a>) (<a href="http://shygoo.net/pj64d/">with Debugger</a>) - An open source Nintendo 64 emulator for Windows and Android</li>
+        <li><a href="http://1964emu.emulation64.com">1964</a> - An open-source Nintendo 64 emulator for Windows. No longer maintained.</li>
+        <li><a href="http://mupen64.emulation64.com">mupen64</a> - An open-source, multi-platform Nintendo 64 emulator. No longer maintained.</li>
+        <li><a href="https://mupen64plus.org">mupen64plus</a> (<a href="https://github.com/mupen64plus">GitHub</a>) - A more recently updated fork of mupen64 for Linux, Mac OSX, FreeBSD, and Windows</li>
+        <li><a href="https://www.retroreversing.com/mupen64RE">Mupen64+ Reverser Edition</a> - A fork of the Mupen64+ Nintendo 64 emulator tailored for reverse engineering</li>
+        <li><a href="https://wiibrew.org/wiki/Wii64">Wii64</a> - A port of mupen64 for Nintendo Wii and Gamecube. No longer maintained.</li>
+        <li><a href="https://gbatemp.net/download/mupen64-360_v0-993_beta2.34126">Mupen64-360</a> - A port of Wii64 (and thus mupen64) to the Xbox 360. No longer maintained.</li>
+        <li>Project Unreality - An early Nintendo 64 emulator for Windows. No longer maintained.</li>
+        <li><a href="http://www.emulation64.com/files/info/202/nemu64.html/">Nemu64</a> - A closed-source Nintendo 64 emulator for Windows. No longer maintained.</li>
+        <li><a href="https://en.wikipedia.org/wiki/UltraHLE">UltraHLE</a> - An early Nintendo 64 emulator for Windows. Though closed-source, <a href="https://web.archive.org/web/20020812020546/http://www.emulation64.com/freeflow-page.html">the source leaked in 2002</a>. No longer maintained.</li>
+        <li><a href="https://github.com/extremscorner/not64">Not64</a> - A fork of Wii64</li>
+        <li><a href="http://surreal64.sourceforge.net">Surreal64</a> and <a href="http://surreal64ce.wikidot.com">Surreal64 CE</a> - A Nintendo 64 emulator for the original Xbox which includes ports of 1964, Project64, and UHLE. No longer maintained.</li>
+        <li><a href="https://sixtyforce.com">Sixtyforce</a> - A closed-source Nintendo 64 emulator for Mac</li>
+        <li><a href="https://sourceforge.net/projects/truereality/">TrueReality</a> - An open-source Nintendo 64 emulator. No longer maintained.</li>
+      </ul>
+      <h2 id="development-hardware">Development Hardware</h2>
+      <ul>
+        <li><a href="http://64drive.retroactive.be/">64drive</a> - A Nintendo 64 flash cartridge with USB support targeted at developers</li>
+        <li><a href="https://krikzz.com/store/home/28-everdrive-64-v3.html">EverDrive-64 v3</a> - A Nintendo 64 flash cartridge</li>
+        <li><a href="http://ultrahdmi.retroactive.be/">UltraHDMI</a> (periodically in stock at <a href="https://www.game-tech.us/product/ultrahdmi/">Game-Tech</a>) - A board that can be installed into the Nintendo 64 to capture the digital output of the RCP and send it out a Mini HDMI connector to a modern TV. Convenient for connecting a real console to a nearby monitor while viewing the best possible output signal.</li>
+        <li><a href="http://64drive.retroactive.be/features.php#ultrasave">UltraSave</a> - A device that works with the 64drive to transfer saves from real cartridges</li>
+        <li><a href="https://hackaday.com/2019/01/11/nintendo-64-homebrew-via-game-shark/">GameShark 3.0+</a> - A method of running homebrew on the Nintendo 64 via a GameShark</li>
+      </ul>
+      <h2 id="tools-and-libraries">Tools and Libraries</h2>
+      <h3 id="development-cartridge-loaders">Development Cartridge Loaders</h3>
+      <ul>
+        <li><a href="https://github.com/RenaKunisaki/64drive-usb-linux/">64drive-usb-linux</a> - A Linux tool to upload to/download from a 64drive development cartridge over USB</li>
+        <li><a href="https://github.com/rasky/g64drive">g64drive</a> - Linux/Mac tool for operating a 64drive development cartridge</li>
+        <li><a href="https://github.com/anacierdem/ed64">ed64</a> - Tools to develop on an EverDrive-64 cartridge</li>
+      </ul>
+      <h3 id="asset-conversion-and-viewing">Asset Conversion and Viewing</h3>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=yUX1Vga6amg">64Drive Viewer</a> - Preview textures, images, sounds, and 3D models on the Nintendo 64 with a 64drive over USB</li>
+        <li><a href="https://github.com/n64dev/objn64">objn64</a> - Wavefront <code class="highlighter-rouge">.obj</code> model converter that generates optimized Nintendo 64 displaylists for compilation with libultra</li>
+        <li><a href="https://github.com/darklink623/n64CIconverter">n64CIconverter</a> - Converts standard image formats to Nintendo 64’s CI format</li>
+        <li><a href="https://github.com/LuigiBlood/N64GFXCookie">N64GFXCookie</a> - Nintendo 64 CI8 format graphics viewer/editor</li>
+        <li><a href="https://github.com/queueRAM/Texture64">Texture64</a> - Nintendo 64 texture ripper and editor with support for multiple formats</li>
+        <li><a href="https://github.com/buu342/N64-SoundTester">N64-SoundTester</a> - A ROM that allows you to test out N64 Sound Tools sample banks and tune them directly on your console or emulator, avoiding lengthy turnaround times</li>
+      </ul>
+      <h3 id="audio-playback-and-editing">Audio Playback and Editing</h3>
+      <ul>
+        <li><a href="https://github.com/jombo23/N64-Tools/tree/master/N64%20Midi%20Tool">N64-Tools</a> - A tool to extract and import audio from many games that make use of the MIDI format</li>
+        <li><a href="https://github.com/parasyte/libmad-n64">libmad-n64</a> - <a href="https://www.underbit.com/products/mad/">libmad</a> with MIPS patches, for MPEG audio playback</li>
+        <li><a href="https://github.com/sauraen/seq64">seq64</a> - A full-featured editor for sequenced music in first-party Nintendo 64 games</li>
+      </ul>
+      <h3 id="debugging">Debugging</h3>
+      <ul>
+        <li><a href="https://github.com/LuigiBlood/EmuScripts/tree/master/N64/Project64">Project64 EmuScripts</a> - Scripts for debugging under Project64 emulation</li>
+      </ul>
+      <h3 id="rom-manipulation">ROM Manipulation</h3>
+      <ul>
+        <li><a href="https://github.com/trhodeos/spicy">spicy</a> - An open-source replacement of the Nintendo 64 SDK’s <code class="highlighter-rouge">mild.exe</code> (referenced by <code class="highlighter-rouge">$(MAKEROM)</code> in many Makefiles). Packs object files into an N64-compatible ROM.</li>
+        <li><a href="https://github.com/trhodeos/makemask">makemask</a> - An open-source replacement of the Nintendo 64 SDK’s <code class="highlighter-rouge">makemask.exe</code>. Adds a mask to a compiled ROM which pads the file to fill the entire cartridge space, adds a CIC version, and adds informational headers to the file. Typically run immediately after <code class="highlighter-rouge">mild.exe</code>. More on this tool at <a href="https://n64squid.com/homebrew/n64-sdk/software/mipse-ultra-gcc/makemask/">N64Squid</a>.</li>
+        <li><a href="https://www.zophar.net/utilities/n64aud/tool-n64.html">Tool N64</a> - A tool to display ROM information and perform byte reordering</li>
+      </ul>
+      <h3 id="development-libraries">Development Libraries</h3>
+      <ul>
+        <li><a href="https://github.com/DragonMinded/libdragon">libdragon</a> - An open-source library for Nintendo 64 development</li>
+        <li><a href="https://github.com/pseudophpt/pseultra">pseultra</a> - A collection of tools used to develop software for the Nintendo 64 that are distinct from the official SDK</li>
+        <li><a href="https://github.com/n64decomp/libreultra">libreultra</a> - A decompilation of the Nintendo 64 standard SDK library, <code class="highlighter-rouge">libultra</code></li>
+      </ul>
+      <h3 id="reverse-engineering">Reverse Engineering</h3>
+      <ul>
+        <li><a href="https://github.com/zeroKilo/N64LoaderWV">N64LoaderWV</a> - Nintendo 64 ROM loader for the <a href="https://github.com/NationalSecurityAgency/ghidra">Ghidra</a> reverse engineering tool</li>
+        <li><a href="https://github.com/shygoo/n64sym">n64sym</a> - Scans a RAM dump for symbols from a given library or object file</li>
+        <li><a href="https://onlinedisassembler.com/odaweb/">Online Disassembler</a> - A lightweight, online service for when you don’t have the time, resources, or requirements to use a heavier-weight alternative</li>
+        <li><a href="https://godbolt.org">Compiler Explorer</a> - Explore how your C, C++, Rust, or other compiled language code ends up looking after compilation</li>
+        <li><a href="https://github.com/matt-kempster/mips_to_c">mips_to_c</a> - An open-source MIPS decompiler, useful for understanding and reimplementing N64 games’ behavior in C</li>
+        <li><a href="https://github.com/jombo23/N64-Tools/tree/master/GEDecompressor">GEDecompressor</a> - Decompressor for a wide variety of compression formats used across Nintendo 64 titles</li>
+        <li><a href="https://github.com/simonlindholm/asm-differ">asm-differ</a> - A <code class="highlighter-rouge">diff</code> script for MIPS assembly</li>
+        <li><a href="https://github.com/simonlindholm/decomp-permuter">decomp-permuter</a> - A tool to randomly permute C files to better match a target binary</li>
+      </ul>
+      <h2 id="videos">Videos</h2>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=84wk0mZ8gfM">Installing the Nintendo 64 Development Kit</a> - How to install the Nintendo 64 Software Development Kit under Windows 2000 and 98SE and build sample code. Also generally works under Windows XP.</li>
+        <li><a href="https://www.youtube.com/watch?v=d5YO2XMBvvk">Nintendo N64 Source Code Programming - A Basic Introduction</a> - A basic introduction to Nintendo 64 development with with NuSystem and the official SDK</li>
+        <li><a href="https://www.youtube.com/watch?v=lvr6-6U0ck8">Building cen64 for Speed and Preservation</a> - Making cen64 fast without compromising on accuracy</li>
+        <li><a href="https://www.youtube.com/watch?v=HwEdqAb2l50">Reversing the Nintendo 64 CIC - REcon 2015</a> - Mike Ryan, marshallh, and John McMaster talk about reverse engineering and cloning a 20 year old copy protection chip (the N64 CIC)</li>
+      </ul>
+      <h2 id="programming">Programming</h2>
+      <h3 id="assembly">Assembly</h3>
+      <ul>
+        <li><a href="https://github.com/PeterLemon/N64">PeterLemon/N64</a> - Nintendo 64 bare metal MIPS assembly programming reference</li>
+        <li><a href="https://www.youtube.com/channel/UC3tcfSES8CB45DmTbHhUP1w">Fraser N64</a> - YouTube channel featuring Nintendo 64 assembly programming</li>
+        <li><a href="https://sites.google.com/site/consoleprotocols/home/homebrew/n64-assembly-home">N64 Assembly Language Tutorial</a> - Fraser’s detailed Nintendo 64 assembly programming guide</li>
+        <li><a href="https://github.com/fraser125/N64-ASM-Tutorial">N64-ASM-Tutorial</a> - The support files for N64 Assembly Language Tutorial</li>
+        <li><a href="https://patater.com/gbaguy/n64asm.htm">N64 ASM Tutorials</a> - Nintendo 64 assembly language programming tutorials by Mike Huber (mirrored by Jaeden Amero)</li>
+        <li><a href="https://github.com/mikeryan/UltraCIC">UltraCIC</a> - Not particularly homebrew development related, but is a useful reference as a clone of the Nintendo 64 CIC copy protection chip</li>
+      </ul>
+      <h3 id="c">C</h3>
+      <ul>
+        <li><a href="https://drive.google.com/drive/folders/1rOE2zYV2RPPx-2NHRGiGZ-RFx6w_6dAI">N64 Homebrew Starter Guide</a> - Buu342’s guide to creating an N64 game with the official Nintendo 64 SDK</li>
+        <li><a href="https://docs.google.com/document/d/1d1qKxMh3q_89w9N76xL9bXRqkXe1ylcDnAtg3cgu5s8">Implementation of Sounds Using the Nintendo 64 Sound Tools</a> - Buu342’s guide to implementing sound in your ROM with the Nintendo 64 Sound Tools</li>
+        <li><a href="https://n64squid.com/homebrew/n64-sdk">N64Squid Homebrew</a> - Development walkthrough using the NuSystem library that’s part of the official Nintendo 64 SDK</li>
+      </ul>
+      <h3 id="rust">Rust</h3>
+      <ul>
+        <li><a href="https://github.com/rust-console/cargo-n64">cargo-n64</a> - A <code class="highlighter-rouge">cargo</code> subcommand to build Nintendo 64 ROMs in Rust</li>
+        <li><a href="https://github.com/monocasa/n64toolchain">n64toolchain</a> - Rust Implementation of Nintendo 64 ROM toolchain</li>
+        <li><a href="https://github.com/monocasa/rs64-rt">rs64-rt</a> - Minimal Rust startup / runtime for Nintendo 64</li>
+        <li><a href="https://github.com/monocasa/rs64-periph">rs64-periph</a> - Fairly raw N64 MMIO definitions</li>
+        <li><a href="https://github.com/monocasa/rs64-rom">rs64-rom</a> - Rust library from manipulating Nintendo 64 ROM images</li>
+        <li><a href="https://github.com/monocasa/rs64romtool">rs64romtool</a> - Tool for manipulating Nintendo 64 ROM images (depends on rs64-rom)</li>
+        <li><a href="https://github.com/rust-console/rrt0">rrt0</a> - A simple cross-platform runtime / startup for Rust on embedded devices</li>
+      </ul>
+      <footer class="site-footer">
+          <span class="site-footer-owner"><a href="https://github.com/command-tab/awesome-n64-development">awesome-n64-development</a> is maintained by <a href="https://github.com/command-tab">command-tab</a>.</span>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </section>
+
+    <script type="text/javascript" src="bundle.js"></script>
+  </body>
+</html>
