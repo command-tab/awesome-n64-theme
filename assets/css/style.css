@@ -114,3 +114,24 @@ a {
       background-image: url(images/github@2x.png);
     }
 }
+
+@media screen and (min-width: 64em) {
+  .site-footer {
+    font-size: 1rem;
+  }
+}
+
+.site-footer {
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: solid 1px #eff0f1;
+}
+
+.site-footer-owner {
+  display: block;
+  font-weight: bold;
+}
+
+.site-footer-credits {
+  color: #819198;
+}
