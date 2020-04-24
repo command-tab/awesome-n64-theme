@@ -18,7 +18,7 @@ module.exports = {
   plugins: [
     new CopyPlugin([
       { from: './src/index.html', to: path.resolve(__dirname, outputDir) },
-      { from: './src/logo.glb', to: path.resolve(__dirname, outputDir) },
+      { from: './src/assets/logo.glb', to: path.resolve(__dirname, outputDir) },
     ]),
   ],
 };

@@ -35,7 +35,7 @@ let model;
 let mixer;
 const loader = new GLTFLoader();
 loader.load(
-  'logo.glb',
+  '/assets/logo.glb',
   function (gltf) {
     model = gltf.scene;
     scene.add(gltf.scene);
