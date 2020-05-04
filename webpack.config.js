@@ -13,7 +13,8 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, outputDir),
     compress: true,
-    port: 9000
+    port: 9000,
+    host: '0.0.0.0'
   },
   plugins: [
     new CopyPlugin([
