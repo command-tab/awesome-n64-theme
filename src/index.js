@@ -47,9 +47,8 @@ loader.load(
     console.log('asset', gltf.asset); // Object
 
     // position model
-    model.position.x = -1;
     model.rotation.x = -.5;
-    
+
     gltf.scene.traverse((node) => {
       if (node.isMesh) {
         node.castShadow = true;
@@ -142,7 +141,7 @@ const MEDIA_QUERIES = [
   { query: 'screen and (min-width: 1280px)', scale: .83 },
   { query: 'screen and (min-width: 800px) and (max-width: 1200px)', scale: .75 },
   { query: 'screen and (min-width: 640px) and (max-width: 800px)', scale: .67 },
-  { query: 'screen and (max-width: 640px)', scale: .65 }
+  { query: 'screen and (max-width: 640px)', scale: .5 }
 ];
 function onWindowResize() {
   camera.aspect = (window.innerWidth) / header.offsetHeight;
