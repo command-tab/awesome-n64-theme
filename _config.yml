@@ -11,5 +11,8 @@ source: .
 destination: ./_site
 
 sass:
-    style: :compressed
-    sass_dir: assets/css/
+  style: :compressed
+  sass_dir: assets/css/
+
+plugins:
+  - jekyll-seo-tag
