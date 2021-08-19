@@ -9,13 +9,22 @@
                 {{ site.name }} // {{ site.description }}
             {% endif %}
         </title>
+        <meta name="description" content="{{ site.description }}" />
+        <link rel="canonical" href="https://n64.dev/" />
+        <script type="application/ld+json">
+        {"description":"{{ site.description }}","url":"https://n64.dev/","@type":"WebSite","headline":"{{ page.title }}","name":"awesome-n64-development","@context":"https://schema.org"}</script>
 
-        {% seo %}
         <meta name="twitter:image:src" content="https://raw.githubusercontent.com/command-tab/awesome-n64-theme/master/assets/og_image.jpg" />
         <meta name="twitter:site" content="@{{ site.github.owner_name }}" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="{{ page.title }}" />
         <meta name="twitter:description" content="{{ site.description }}" />
+
+        <meta property="og:title" content="{{ page.title }}" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:description" content="{{ site.description }}" />
+        <meta property="og:url" content="https://n64.dev/" />
+        <meta property="og:site_name" content="{{ page.title }}" />
         <meta property="og:image" content="https://raw.githubusercontent.com/command-tab/awesome-n64-theme/master/assets/og_image.jpg" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
